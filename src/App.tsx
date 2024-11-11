@@ -61,8 +61,8 @@ function App() {
 
   // Canne a peche Author 
   function getAuthorForm(author: Author): void {
-    // setMessages sert a modifier mon message
-    setMessages([...authors, author]);
+    // setAuthors sert a modifier mon message
+    setAuthors([...authors, author]);
   }
 
 
@@ -76,7 +76,7 @@ function App() {
         <Route path="contact" element={
           <ContactPage getContactForm={ getContactForm } />
         } />
-        <Route path="author" element={<AuthorPage />} />
+        <Route path="author" element={<AuthorPage authors={authors} />} />
         <Route path="addAuthor" element={ //2 j'envoie a 3
           <AddAuthorPage getAuthorForm={ getAuthorForm }/>} 
         />       
